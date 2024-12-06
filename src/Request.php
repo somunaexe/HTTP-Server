@@ -36,4 +36,26 @@ class Request {
         //Create a new request object
         return new static($method, $uri, $headers);
     }
+
+    public function method(){
+        return $this->method;
+    }
+
+    public function uri(){
+        return $this->uri;
+    }
+
+    public function header($key, $default = null){
+        if(!isset($this->headers[$key])){
+            return $default;
+        }
+        return $this->headers[$key];
+    }
+
+    public function param($key, $default = null){
+        if(!isset($this->parameters[$key])){
+            return $default;
+        }
+        return $this->parameters[$key];
+    }
 }
