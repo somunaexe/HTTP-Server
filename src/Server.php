@@ -72,6 +72,7 @@ class Server {
             socket_write($client, $response, strlen($response));
 
             //Close the connection so we can accept new ones
-            socket_close($client);        }
+            socket_close($client);        
+        }
     }
 }
