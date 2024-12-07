@@ -5,7 +5,6 @@ use HTTPServer\Response;
 use HTTPServer\Request;
 
 array_shift($argv);
-
 empty($argv) ? $port = 80 : $port = array_shift($argv);
 
 require 'vendor/autoload.php';
